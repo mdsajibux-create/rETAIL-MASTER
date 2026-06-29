@@ -1,0 +1,22 @@
+{
+  "menu": {
+    "main": "رئيسي",
+    "text-shop-management": "إدارة المحلات",
+    "text-product-management": "إدارة المنتج",
+    "text-order-management": "إدارة الطلبات",
+    "sidebar-nav-item-shops": "المحلات التجارية",
+    "sidebar-nav-item-products": "منتجات",
+    "text-inventory": "جرد",
+    "sidebar-nav-item-categories": "فئات",
+    "sidebar-nav-item-orders": "طلبات",
+    "text-transactions": "المعاملات",
+    "text-user-control": "التحكم بالمستخدم",
+    "text-all-users": "جميع المستخدمين",
+    "text-admin-list": "قائمة المشرفين",
+    "vendors": "الباعة",
+    "sidebar-nav-item-staffs": "طاقم عمل",
+    "text-customers": "عملاء",
+    "sidebar-nav-item-dashboard": "لوحة القيادة",
+    "area": "منطقة"
+  }
+}

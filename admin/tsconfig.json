@@ -1,0 +1,53 @@
+{
+  "compilerOptions": {
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "react-jsx",
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "paths": {
+      "@/*": [
+        "./src/*"
+      ]
+    },
+    "target": "ES2017",
+    "typeRoots": [
+      "./types",
+      "./node_modules/@types"
+    ]
+  },
+  "include": [
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "next-env.d.ts",
+    "src/app/[locale]/admin/not-found.tsx", // Keep the original not-found.tsx for generic fallback
+    "src/app/[locale]/not-found.tsx", // Add specific not-found for admin
+    "src/app/[locale]/seller/not-found.tsx" // Add specific not-found for seller
+    ,
+    "src/modules/common/become-a-seller/become-a-seller.action.ts",
+    "build/types/**/*.ts",
+    "types/**/*.ts",
+    "build/dev/types/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "deploy"
+  ]
+}

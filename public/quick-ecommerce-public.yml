@@ -1,0 +1,26 @@
+#https://faun.pub/configure-laravel-properly-for-ci-cd-6f9965034108
+
+stages:
+  - deploy
+
+deploy:
+  stage: deploy
+  image: mwienk/docker-lftp:latest
+  variables:
+    GIT_CLEAN_FLAGS: -x -f -e public/**
+  cache:
+    untracked: true    
+  script:
+    # Ref https://stackoverflow.com/questions/41633518/automated-gitlab-ci-yml-lftp-configuration
+    #- lftp -c "set ssl:verify-certificate no; set ftp:ssl-allow no; open -u $FTP_USER_S,$FTP_PASS_S $FTP_HOST_S; mirror -Rnev ./ $DIR_PATH --no-symlinks --ignore-time --only-newer --parallel=10 --exclude-glob .git* --exclude .git/ --exclude *.htaccess --exclude *.env --exclude vendor/  --no-perms bye;" 
+    #- lftp -c "set ssl:verify-certificate no; set ftp:ssl-allow no; open -u $FTP_USER_S,$FTP_PASS_S $FTP_HOST_S; mirror -Rnev ./ $DIR_PATH --no-symlinks --ignore-time --only-newer --parallel=10 --exclude-glob .git* --exclude .git/ --exclude bootstrap/cache/ --exclude storage/media-library/temp --exclude public/error_log --exclude storage/ --exclude .htaccess --exclude .env --exclude vendor/  --no-perms"
+    - lftp -c "set ssl:verify-certificate no; set ftp:ssl-allow no; open -u $FTP_USER,$FTP_PASS $FTP_HOST; mirror -Rne --ignore-size ./ $DIR_PATH --no-symlinks --parallel=10 --exclude-glob .git* --exclude .git/ --exclude node_modules/ --exclude storage/media-library/temp --exclude public/error_log --exclude storage/ --exclude .htaccess --exclude .env --exclude .next/ --exclude deploy/ --exclude build/ --exclude standalone/  --no-perms"
+    #- lftp -c "set ssl:verify-certificate no; set ftp:ssl-allow no; open -u $FTP_USER_S,$FTP_PASS_S $FTP_HOST_S; mirror -Rne --ignore-size ./ $DIR_PATH --no-symlinks --parallel=10 --exclude-glob .git* --exclude .git/ --exclude node_modules/ --exclude storage/media-library/temp --exclude public/error_log --exclude storage/ --exclude .htaccess --exclude .next/ --no-perms"
+    #- php composer.phar install
+    #- composer dump-autoload
+    #- php artisan config:clear
+    #- php artisan optimize:clear    
+    #- lftp -d -c " set ssl:verify-certificate no;  open -u $FTP_USERNAME,$FTP_PASSWORD $FTP_HOST;    mirror -R --verbose --only-newer --parallel=10 $LOCAL_DIR $REMOTE_DIR;    bye;    "    
+    
+  only:
+    - tanvir_develop

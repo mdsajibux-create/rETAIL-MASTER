@@ -1,0 +1,30 @@
+{
+    "name": "nwidart/feedback",
+    "description": "",
+    "authors": [
+        {
+            "name": "Nicolas Widart",
+            "email": "n.widart@gmail.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [],
+            "aliases": {
+
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\Feedback\\": "app/",
+            "Modules\\Feedback\\Database\\Factories\\": "database/factories/",
+            "Modules\\Feedback\\Database\\Seeders\\": "database/seeders/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Modules\\Feedback\\Tests\\": "tests/"
+        }
+    }
+}

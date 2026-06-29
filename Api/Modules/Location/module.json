@@ -1,0 +1,12 @@
+{
+    "name": "Location",
+    "alias": "location",
+    "description": "Manage country, state, city and area locations",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\Location\\app\\Providers\\LocationServiceProvider"
+    ],
+    "files": [],
+    "version": "1.0.0"
+}

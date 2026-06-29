@@ -1,0 +1,11 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "Live Preview",
+			"workspacePath": "c:\\Users\\admin\\Desktop\\Retail master\\folder\\admin",
+			"problemMatcher": [],
+			"label": "Live Preview: Run Server"
+		}
+	]
+}

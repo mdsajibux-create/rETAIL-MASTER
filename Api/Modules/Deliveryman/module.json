@@ -1,0 +1,11 @@
+{
+    "name": "Deliveryman",
+    "alias": "deliveryman",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\Deliveryman\\app\\Providers\\DeliverymanServiceProvider"
+    ],
+    "files": []
+}

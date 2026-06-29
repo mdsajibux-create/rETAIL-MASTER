@@ -1,0 +1,11 @@
+{
+    "name": "BusinessSettings",
+    "alias": "businesssettings",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\BusinessSettings\\app\\Providers\\BusinessSettingsServiceProvider"
+    ],
+    "files": []
+}

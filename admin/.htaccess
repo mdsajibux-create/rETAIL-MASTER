@@ -1,0 +1,25 @@
+# DO NOT REMOVE. CLOUDLINUX PASSENGER CONFIGURATION BEGIN
+PassengerAppRoot "/home/disystem/bravomart-admin.bravo-soft.com"
+PassengerBaseURI "/"
+PassengerNodejs "/home/disystem/nodevenv/bravomart-admin.bravo-soft.com/20/bin/node"
+PassengerAppType node
+PassengerStartupFile _next/standalone/server.js
+# DO NOT REMOVE. CLOUDLINUX PASSENGER CONFIGURATION END
+# DO NOT REMOVE. CLOUDLINUX PASSENGER CONFIGURATION BEGIN
+PassengerAppRoot "/home/disystem/admin.bravomart.app"
+PassengerBaseURI "/"
+PassengerNodejs "/home/disystem/nodevenv/admin.bravomart.app/10/bin/node"
+PassengerAppType node
+PassengerStartupFile app.js
+# DO NOT REMOVE. CLOUDLINUX PASSENGER CONFIGURATION END
+# DO NOT REMOVE. CLOUDLINUX PASSENGER CONFIGURATION BEGIN
+PassengerAppRoot "/home/disystem/admin.bravomart.app"
+PassengerBaseURI "/"
+PassengerNodejs "/home/disystem/nodevenv/admin.bravomart.app/20/bin/node"
+PassengerAppType node
+PassengerStartupFile _next/standalone/server.js
+# DO NOT REMOVE. CLOUDLINUX PASSENGER CONFIGURATION END
+# DO NOT REMOVE OR MODIFY. CLOUDLINUX ENV VARS CONFIGURATION BEGIN
+<IfModule Litespeed>
+</IfModule>
+# DO NOT REMOVE OR MODIFY. CLOUDLINUX ENV VARS CONFIGURATION END

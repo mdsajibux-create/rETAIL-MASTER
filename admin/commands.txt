@@ -1,0 +1,2 @@
+--Update all packages to the Latest 
+npx npm-check-updates -u

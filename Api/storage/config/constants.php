@@ -1,0 +1,41 @@
+<?php
+
+if (!defined('APP_NOTICE_DOMAIN')) {
+    define('APP_NOTICE_DOMAIN', config('shop.app_notice_domain'));
+}
+
+if (!defined('DEFAULT_LANGUAGE')) {
+    define('DEFAULT_LANGUAGE', config('bivamart.default_language'));
+}
+
+if (!defined('NOT_AUTHORIZED')) {
+    define('NOT_AUTHORIZED', APP_NOTICE_DOMAIN . 'ERROR.NOT_AUTHORIZED');
+}
+
+if (!defined('SOMETHING_WENT_WRONG')) {
+    define('SOMETHING_WENT_WRONG', APP_NOTICE_DOMAIN . 'ERROR.SOMETHING_WENT_WRONG');
+}
+
+if (!defined('NOT_FOUND')) {
+    define('NOT_FOUND', APP_NOTICE_DOMAIN . 'ERROR.NOT_FOUND');
+}
+
+if (!defined('CHECK_INBOX_FOR_PASSWORD_RESET_EMAIL')) {
+    define('CHECK_INBOX_FOR_PASSWORD_RESET_EMAIL', APP_NOTICE_DOMAIN . 'MESSAGE.CHECK_INBOX_FOR_PASSWORD_RESET_EMAIL');
+}
+
+if (!defined('TOKEN_IS_VALID')) {
+    define('TOKEN_IS_VALID', APP_NOTICE_DOMAIN . 'MESSAGE.TOKEN_IS_VALID');
+}
+
+if (!defined('INVALID_TOKEN')) {
+    define('INVALID_TOKEN', APP_NOTICE_DOMAIN . 'MESSAGE.INVALID_TOKEN');
+}
+
+if (!defined('PASSWORD_RESET_SUCCESSFUL')) {
+    define('PASSWORD_RESET_SUCCESSFUL', APP_NOTICE_DOMAIN . 'MESSAGE.PASSWORD_RESET_SUCCESSFUL');
+}
+
+if (!defined('COULD_NOT_CREATE_THE_RESOURCE')) {
+    define('COULD_NOT_CREATE_THE_RESOURCE', APP_NOTICE_DOMAIN . 'ERROR.COULD_NOT_CREATE_THE_RESOURCE');
+}

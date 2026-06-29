@@ -1,0 +1,26 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # -------------------------------------------
+    # ALLOW INSTALLER ACCESS 
+    # -------------------------------------------
+    # Let requests to /install/* bypass public/
+    RewriteCond %{REQUEST_URI} ^/install($|/)
+    RewriteRule ^ - [L]
+
+    # Also allow installer assets explicitly (optional but recommended)
+    RewriteCond %{REQUEST_URI} ^/install/assets/
+    RewriteRule ^ - [L]
+
+    # -------------------------------------------
+    # NORMAL REDIRECTION TO public/
+    # -------------------------------------------
+    RewriteRule ^$ public/index.php [L]
+    RewriteRule ^((?!public/).*)$ public/$1 [L,NC]
+</IfModule>
+
+# Protect .env
+<Files .env>
+    Order allow,deny
+    Deny from all
+</Files>

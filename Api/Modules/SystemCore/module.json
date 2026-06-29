@@ -1,0 +1,11 @@
+{
+    "name": "SystemCore",
+    "alias": "systemcore",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\SystemCore\\app\\Providers\\SystemCoreServiceProvider"
+    ],
+    "files": []
+}
